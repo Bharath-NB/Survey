@@ -1,0 +1,55 @@
+.rating {
+    margin: 190px auto green;
+    width: 400px;   
+    justify-content: flex-start;
+}
+.rating >*{
+    float: right;
+}
+.rating label {
+    height: 20px;
+    width: 20px;
+    display: block;
+    position: relative;
+    cursor: pointer;
+}
+
+.rating label::after{
+    transition: all 0.4s ease-out;
+    -webkit-font-smoothing:antialiased;
+    content: "✰";
+    color: #444;
+    font-size: auto;
+    -webkit-animation: 1s plus ease;
+    animation: 1s pluse ease;
+}
+
+.rating label:hover::after{
+    color: #5e5e5e;
+    text-shadow: 0 0 15px #5e5e5e;
+}
+
+.rating input{
+    display: none;
+}
+.rating input:checked + label::after,
+.rating input:checked ~ label::after{
+    content: "⭐";
+    color: #f9bf3b;
+    text-shadow: 0 0 20px #f9bf3b;
+}
+
+.satisfaction-purchase{
+    background-color: rgb(198, 198, 198);
+}
+.satisfaction-overall{
+    background-color: rgb(198, 198, 198);
+}
+
+.likely-buyagain{
+    background-color: rgb(198, 198, 198);
+}
+
+.likely-company{
+    background-color: rgb(198, 198, 198);
+}
